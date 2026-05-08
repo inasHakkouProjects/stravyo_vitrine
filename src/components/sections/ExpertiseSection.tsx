@@ -203,7 +203,6 @@ export function ExpertiseSection() {
 
         <div className="mt-16 flex flex-col gap-16 lg:gap-24">
           {expertiseItems.map((item, index) => {
-            const step = String(index + 1).padStart(2, "0");
             const media = pillarMedia[index];
             const accent =
               index === 0 ? "slate" : index === 1 ? "royal" : "deep";

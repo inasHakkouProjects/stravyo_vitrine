@@ -55,7 +55,9 @@ export function Footer() {
                     {footerContact.phone}
                   </a>
                 </li>
-                <li className="text-white/60">{footerContact.address}</li>
+                <li className="text-white/60">{footerContact.address1}</li>
+                <li className="text-white/60">{footerContact.address2}</li>
+                <li className="text-white/60">{footerContact.address3}</li>
               </ul>
             </div>
           </div>

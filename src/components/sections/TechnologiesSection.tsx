@@ -169,9 +169,9 @@ export function TechnologiesSection() {
                 />
                 <div className="relative z-[1] flex gap-4">
                   <div className="flex shrink-0 flex-col items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full border border-royal/15 bg-royal/[0.06] font-display text-xs font-semibold text-royal">
+                    {/* <span className="flex h-9 w-9 items-center justify-center rounded-full border border-royal/15 bg-royal/[0.06] font-display text-xs font-semibold text-royal">
                       {String(i + 1).padStart(2, "0")}
-                    </span>
+                    </span> */}
                     <motion.div
                       whileHover={
                         reduce

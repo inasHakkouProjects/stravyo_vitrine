@@ -72,13 +72,13 @@ export function HeroSection() {
 
 
             <motion.h1
-              className="mt-[3.5rem] font-display text-[15px] font-normal leading-[1.12] tracking-tight text-white"
+              className="mt-[3.5rem] font-display text-[18px] font-normal leading-[1.12] tracking-tight text-white"
               initial={reduce ? false : { opacity: 0, y: 28, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
-              <span className="block">Votre partenaire en diagnostic structure</span>
-              <span className="block">et gestion de patrimoine</span>
+              <span className="block">Votre partenaire en diagnostic structure et gestion de patrimoine.</span>
+              {/* <span className="block">et gestion de patrimoine</span> */}
             </motion.h1>
 
             {/* <motion.p

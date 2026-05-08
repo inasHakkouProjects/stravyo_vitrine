@@ -57,11 +57,11 @@ function ServiceCard({
           className={`relative z-[1] flex ${featured ? "flex-col gap-8 lg:flex-row lg:items-start lg:justify-between" : "flex-col gap-5"}`}
         >
           <div className={featured ? "max-w-2xl" : undefined}>
-            {featured && (
+            {/* {featured && (
               <p className="text-[0.65rem] font-semibold uppercase tracking-[0.26em] text-royal/85">
                 Mission phare
               </p>
-            )}
+            )} */}
             <h3
               className={`font-display font-semibold tracking-tight text-midnight ${featured ? "mt-2 text-2xl sm:text-[1.65rem]" : "text-lg"}`}
             >

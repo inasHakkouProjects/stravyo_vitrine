@@ -222,9 +222,9 @@ export function ExpertiseSection() {
               >
                 <div className="pillar-copy space-y-6">
                   <div className="flex flex-col gap-3">
-                    <p className="font-display text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-royal/80">
+                    {/* <p className="font-display text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-royal/80">
                       Pilier {step}
-                    </p>
+                    </p> */}
                     <h3 className="font-display text-2xl font-semibold tracking-tight text-midnight sm:text-3xl">
                       {item.title}
                     </h3>

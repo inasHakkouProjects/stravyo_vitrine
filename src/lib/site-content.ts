@@ -227,5 +227,7 @@ export const advantageCards: {
 export const footerContact = {
   email: "contact@stravyo.com",
   phone: "+33 (0)6 25 09 40 91",
-  address: "Paris & Île-de-France",
+  address1: "Paris & Île-de-France",
+  address2: "Bordeaux & Aquitaine",
+  address3: "Lyon & Rhône-Alpes",
 };

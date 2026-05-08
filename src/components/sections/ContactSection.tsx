@@ -5,7 +5,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
-import { CONTACT_PLACEHOLDER_EMAIL } from "@/lib/contact-config";
 import { footerContact } from "@/lib/site-content";
 
 const ease = [0.22, 1, 0.36, 1] as const;

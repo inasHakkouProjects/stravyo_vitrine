@@ -119,7 +119,7 @@ export function AdvantagesSection() {
                       Passer à l’action
                     </div>
                     <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight sm:text-3xl">
-                     Besoin d'un diagnostic structure?
+                     Besoin d&apos;un diagnostic structure&nbsp;?
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-white/72 sm:text-base">
                       Décrivez votre contexte : notre équipe vous répond pour

@@ -6,7 +6,12 @@ export type ContactPayload = {
   message: string;
 };
 
+/** Format e-mail pragmatique (unicité locale + domaine avec TLD). */
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function isNonEmptyName(value: string): boolean {
+  return value.trim().length > 0;
+}
 
 export function validateContactPayload(
   input: unknown,
@@ -18,26 +23,25 @@ export function validateContactPayload(
   const o = input as Record<string, unknown>;
   const firstName = String(o.firstName ?? "").trim();
   const lastName = String(o.lastName ?? "").trim();
-  const email = String(o.email ?? "").trim();
+  const email = String(o.email ?? "").trim().toLowerCase();
   const subject = String(o.subject ?? "").trim();
   const message = String(o.message ?? "").trim();
 
   const errors: string[] = [];
 
-  if (firstName.length < 2) {
-    errors.push("Le prénom doit contenir au moins 2 caractères.");
+  if (!isNonEmptyName(firstName)) {
+    errors.push("Le prénom est obligatoire.");
   }
-  if (lastName.length < 2) {
-    errors.push("Le nom doit contenir au moins 2 caractères.");
+  if (!isNonEmptyName(lastName)) {
+    errors.push("Le nom est obligatoire.");
   }
-  if (!EMAIL_RE.test(email)) {
+  if (!email) {
+    errors.push("L’adresse e-mail est obligatoire.");
+  } else if (!EMAIL_RE.test(email)) {
     errors.push("L’adresse e-mail n’est pas valide.");
   }
-  if (subject.length < 3) {
-    errors.push("L’objet doit contenir au moins 3 caractères.");
-  }
-  if (message.length < 10) {
-    errors.push("Le message doit contenir au moins 10 caractères.");
+  if (!message) {
+    errors.push("Le message est obligatoire.");
   }
 
   if (errors.length) {

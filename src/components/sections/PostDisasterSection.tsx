@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { AlertTriangle, CheckCircle2, Zap } from "lucide-react";
+import { AlertTriangle, CheckCircle2 } from "lucide-react";
 import { useRef } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { postDisasterServices } from "@/lib/site-content";

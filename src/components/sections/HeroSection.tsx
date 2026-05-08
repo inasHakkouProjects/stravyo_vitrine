@@ -70,23 +70,15 @@ export function HeroSection() {
               Ensemble, construisons la pérennité de votre patrimoine immobilier.
             </motion.p>
 
-            {/* <motion.h3
-              className="mt-5 font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-[2.65rem] xl:text-5xl"
-              initial={reduce ? false : { opacity: 0, y: 28, filter: "blur(10px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Ensemble, construisons la pérennité de votre patrimoine immobilier.
-            </motion.h3> */}
 
             <motion.h1
-              className="mt-[3.5rem] font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white sm:text-3xl lg:text-[2.65rem] xl:text-3xl"
+              className="mt-[3.5rem] font-display text-[15px] font-normal leading-[1.12] tracking-tight text-white"
               initial={reduce ? false : { opacity: 0, y: 28, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              
             >
-              Votre partenaire en diagnostic structure et gestion de patrimoine
+              <span className="block">Votre partenaire en diagnostic structure</span>
+              <span className="block">et gestion de patrimoine</span>
             </motion.h1>
 
             {/* <motion.p

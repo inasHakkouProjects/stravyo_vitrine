@@ -159,12 +159,11 @@ export function ContactForm() {
 
       <div className="mt-4">
         <label htmlFor="contact-subject" className="mb-1.5 block text-sm font-medium text-midnight">
-          Objet <span className="text-red-600">*</span>
+          Objet <span className="font-normal text-midnight/50">(optionnel)</span>
         </label>
         <input
           id="contact-subject"
           name="subject"
-          required
           value={values.subject}
           onChange={onChange}
           className={fieldClass}

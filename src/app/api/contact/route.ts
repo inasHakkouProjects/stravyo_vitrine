@@ -28,7 +28,7 @@ export async function POST(request: Request) {
   if (!apiKey) missingVars.push("RESEND_API_KEY");
   if (!resendFrom) missingVars.push("RESEND_FROM");
 
-  if (missingVars.length > 0) {
+  if (!apiKey || !resendFrom) {
     console.error(`[api/contact] Variables manquantes : ${missingVars.join(", ")}`);
     const isDev = process.env.NODE_ENV === "development";
     return NextResponse.json(

@@ -183,9 +183,9 @@ export function TechnologiesSection() {
                     </motion.div>
                   </div>
                   <div className="min-w-0 flex-1 pt-0.5">
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-royal/75">
+                    {/* <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-royal/75">
                       Protocole
-                    </p>
+                    </p> */}
                     <h3 className="mt-1 font-display text-lg font-semibold tracking-tight text-midnight">
                       {row.title}
                     </h3>

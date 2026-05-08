@@ -101,7 +101,7 @@ export function PostDisasterSection() {
               </motion.p>
             </Reveal>
 
-            <motion.div
+            {/* <motion.div
               className="mt-10 flex flex-wrap gap-3"
               initial={reduce ? false : { opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -120,7 +120,7 @@ export function PostDisasterSection() {
                   {t}
                 </motion.span>
               ))}
-            </motion.div>
+            </motion.div> */}
           </div>
 
           <ul className="relative space-y-4 lg:col-span-7">
@@ -174,9 +174,9 @@ export function PostDisasterSection() {
                       <CheckCircle2 className="h-5 w-5" strokeWidth={1.5} />
                     </motion.span>
                     <div className="min-w-0 flex-1">
-                      <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-red-200/70">
+                      {/* <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-red-200/70">
                         Point {String(i + 1).padStart(2, "0")}
-                      </p>
+                      </p> */}
                       <p className="mt-1 text-sm leading-relaxed text-white/90 sm:text-[0.9375rem]">
                         {line}
                       </p>

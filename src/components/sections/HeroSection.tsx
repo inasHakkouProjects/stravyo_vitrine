@@ -54,24 +54,42 @@ export function HeroSection() {
         <div className="grid items-center gap-12 py-10 sm:py-14 lg:grid-cols-12 lg:gap-10 lg:py-16 xl:py-20">
           <div className="lg:col-span-6 xl:col-span-6">
             <motion.p
-              className="text-[26px] font-semibold uppercase tracking-[0.28em] text-sky-200/80"
+              className="text-[53px] font-semibold uppercase tracking-[0.28em] text-sky-200/80"
               initial={reduce ? false : { opacity: 0, y: 16, letterSpacing: "0.5em" }}
               animate={{ opacity: 1, y: 0, letterSpacing: "0.28em" }}
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
             >
               Stravyo
             </motion.p>
+            <motion.p
+              className="text-[15px] font-semibold uppercase tracking-[0.28em] text-sky-200/80"
+              initial={reduce ? false : { opacity: 0, y: 16, letterSpacing: "0.5em" }}
+              animate={{ opacity: 1, y: 0, letterSpacing: "0.28em" }}
+              transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+            >
+              Ensemble, construisons la pérennité de votre patrimoine immobilier.
+            </motion.p>
 
-            <motion.h1
+            {/* <motion.h3
               className="mt-5 font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-[2.65rem] xl:text-5xl"
               initial={reduce ? false : { opacity: 0, y: 28, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
+              Ensemble, construisons la pérennité de votre patrimoine immobilier.
+            </motion.h3> */}
+
+            <motion.h1
+              className="mt-[3.5rem] font-display text-3xl font-semibold leading-[1.12] tracking-tight text-white sm:text-3xl lg:text-[2.65rem] xl:text-3xl"
+              initial={reduce ? false : { opacity: 0, y: 28, filter: "blur(10px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              
+            >
               Votre partenaire en diagnostic structure et gestion de patrimoine
             </motion.h1>
 
-            <motion.p
+            {/* <motion.p
               className="mt-6 max-w-xl text-base leading-relaxed text-white/72 sm:text-lg"
               initial={reduce ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -81,7 +99,7 @@ export function HeroSection() {
               d’actifs dans l’évaluation, la sécurisation, l’optimisation et la
               pérennisation de leurs structures et patrimoines bâtis — du
               diagnostic à l’assistance technique sur chantier.
-            </motion.p>
+            </motion.p> */}
 
             <motion.div
               className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"

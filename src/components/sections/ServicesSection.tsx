@@ -89,7 +89,7 @@ function ServiceCard({
           </motion.div>
         </div>
 
-        {featured && (
+        {/* {featured && (
           <div className="relative z-[1] mt-8 flex flex-wrap gap-2 border-t border-midnight/[0.06] pt-8">
             {["Essais & mesures", "Modélisation", "Restitution"].map((tag) => (
               <span
@@ -100,7 +100,7 @@ function ServiceCard({
               </span>
             ))}
           </div>
-        )}
+        )} */}
       </motion.article>
     </motion.div>
   );

@@ -117,9 +117,9 @@ export function StrategicSection() {
                   aria-hidden
                 />
                 <div className="relative z-[1] pl-4">
-                  <p className="text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-midnight/45">
+                  {/* <p className="text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-midnight/45">
                     Axes {block.step}
-                  </p>
+                  </p> */}
                   <h3 className="mt-2 font-display text-xl font-semibold tracking-tight text-midnight">
                     {block.title}
                   </h3>
@@ -133,7 +133,7 @@ export function StrategicSection() {
                     {block.description}
                   </motion.p>
                 </div>
-                <div className="pointer-events-none absolute right-4 top-4 h-16 w-24 overflow-hidden rounded-lg opacity-0 transition duration-500 group-hover:opacity-100 sm:h-20 sm:w-32">
+                {/* <div className="pointer-events-none absolute right-4 top-4 h-16 w-24 overflow-hidden rounded-lg opacity-0 transition duration-500 group-hover:opacity-100 sm:h-20 sm:w-32">
                   <Image
                     src={axeImages[i]}
                     alt=""
@@ -141,7 +141,7 @@ export function StrategicSection() {
                     className="object-cover"
                     sizes="128px"
                   />
-                </div>
+                </div> */}
               </motion.article>
             ))}
 

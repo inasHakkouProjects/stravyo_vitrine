@@ -112,7 +112,7 @@ export const servicePortfolio: {
   {
     title: "Expertise multi-matériaux",
     description:
-      "Essais en laboratoire et in situ sur béton, métaux, maçonneries et composites pour caractériser les propriétés mécaniques et corréler avec les modèles de calcul.",
+      "Essais en laboratoire et in situ sur béton, bois, métaux, maçonneries et composites pour caractériser les propriétés mécaniques et corréler avec les modèles de calcul.",
     icon: Layers,
   },
 ];
@@ -227,5 +227,5 @@ export const advantageCards: {
 export const footerContact = {
   email: "contact@stravyo.fr",
   phone: "+33 (0)6 25 09 40 91",
-  address: "Paris & Île-de-France",
+  // address: "Paris & Île-de-France",
 };

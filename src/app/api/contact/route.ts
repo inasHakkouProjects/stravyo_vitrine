@@ -18,11 +18,24 @@ function mailSubject(userSubject: string, fullName: string): string {
   return `[Stravyo] ${base} — ${fullName}`;
 }
 
+/** Copier-coller .env/Vercel : enlève `"..."` ou `'...'` autour de la valeur. */
+function stripOuterQuotes(raw: string): string {
+  const t = raw.trim();
+  if (t.length >= 2) {
+    const a = t[0];
+    const b = t[t.length - 1];
+    if ((a === '"' && b === '"') || (a === "'" && b === "'")) {
+      return t.slice(1, -1).trim();
+    }
+  }
+  return t;
+}
+
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY?.trim();
   const contactEmail =
-    process.env.CONTACT_EMAIL?.trim() ?? CONTACT_PLACEHOLDER_EMAIL;
-  const resendFrom = process.env.RESEND_FROM?.trim();
+    process.env.CONTACT_EMAIL?.trim() || CONTACT_PLACEHOLDER_EMAIL;
+  const resendFrom = stripOuterQuotes(process.env.RESEND_FROM ?? "");
 
   const missingVars: string[] = [];
   if (!apiKey) missingVars.push("RESEND_API_KEY");
@@ -85,17 +98,37 @@ export async function POST(request: Request) {
 
   const resend = new Resend(apiKey);
 
-  const { error } = await resend.emails.send({
-    from: resendFrom,
-    to: [contactEmail],
-    replyTo: email,
-    subject: mailSubject(subject, fullName),
-    text: textLines.join("\n"),
-    html,
-  });
+  let sendResult: Awaited<ReturnType<typeof resend.emails.send>>;
+  try {
+    sendResult = await resend.emails.send({
+      from: resendFrom,
+      to: [contactEmail],
+      replyTo: email,
+      subject: mailSubject(subject, fullName),
+      text: textLines.join("\n"),
+      html,
+    });
+  } catch (err) {
+    console.error(
+      "[api/contact] Envoi mail : exception non gérée",
+      err instanceof Error ? err.stack ?? err.message : err,
+    );
+    return NextResponse.json(
+      {
+        ok: false,
+        error:
+          "L’envoi du message a échoué. Veuillez réessayer dans quelques instants.",
+      },
+      { status: 500 },
+    );
+  }
 
+  const { error } = sendResult;
   if (error) {
-    console.error("[api/contact] Resend error:", error);
+    console.error(
+      "[api/contact] Resend:",
+      typeof error === "object" ? JSON.stringify(error) : error,
+    );
     return NextResponse.json(
       {
         ok: false,
